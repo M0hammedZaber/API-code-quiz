@@ -1,8 +1,6 @@
 function printHighscores() {
     // Here like script.js scores either get taken from the the localstorage or set to empty array.
-    var highscores =
-    
-    JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
  
     // Allignment of scores sorted in descending order.
     highscores.sort(function(a, b) {

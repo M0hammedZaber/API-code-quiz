@@ -56,19 +56,7 @@ function getQuestions() {
     choicesEl.appendChild(choiceNode);
   });
 }
-currentQuestion.choices.forEach(function(choice, i) {
-    // New buttons will be created for each available choice.
-    var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class", "choice");
-    choiceNode.setAttribute("value", choice);
 
-    choiceNode.textContent = i + 1 + ". " + choice;
-
-    // attach click event listener to each choice
-    choiceNode.onclick = questionSelection;
-
-    choicesEl.appendChild(choiceNode);
-  });
   function questionSelection() {
     // Time will be penalized if a quessed is answered incorrectly, this will be checked here.
     if (this.value !== questions[questionIndex].answer) {
